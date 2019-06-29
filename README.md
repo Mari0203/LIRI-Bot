@@ -30,6 +30,42 @@ http://github.com - automatic!
 ## My Role
 Unicorn Powerrrrrrrrr!
 
+## App Requirements
+The app will use the text in `random.txt` file to call one of LIRI-Bot's commands. For example, it will run `spotify-this-song` command when the text in `random.txt` is "I Want it That Way".
 
+### Getting Data from SPOTIFY:
 
-:v: & :green_heart:
+1. User can enter name of a song to get following information about the song:
+    * Artist(s)
+    * The song title
+    * Preview link of the song from Spotify
+    * The album name
+
+2. If no song is provided, then the app will default to presenting "The Sign" by Ace of Base as output.
+
+### Getting Data from BANDS IN TOWN:
+
+1. User can enter an artist (or a band)'s name to get following detail of that artist's concert event:
+    * Name of the venue
+    * Venue location
+    * Date of the event in the MM/DD/YYYY format
+    
+2. If no event is found, signal the user as so.
+
+### Getting Data from OMDB:
+
+1. User can enter the title of a movie to get following information about that movie:
+    * Title
+    * Release Year
+    * IMDB Rating
+    * Rotten Tomatoes Rating
+    * Country in which the movie was produced
+    * Original Language
+    * Plot
+    * Casts
+
+2. If the user does not enter a movie name, the app will out put the data for the movie, 'Mr. Nobody' as default.
+
+ 
+Created by Mari
+with :v:  &  :green_heart:
