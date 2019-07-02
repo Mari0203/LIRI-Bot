@@ -85,7 +85,7 @@ if (process.argv[2] === "spotify-this-song") {
     doWhatItSaysSearch();
 
 } else if (process.argv[2] === "concert-this") {
-    concertSerach(process.argv[3]);
+    concertSearch(process.argv[3]);
 }
 
 // ================= 2) DO-WHAT-IT-SAYS SEARCH (from random.txt)=============== //
