@@ -1,8 +1,8 @@
 // ====== Make it so that liri.js can take in one of the following commands ====== //
 // 1) spotify-this-song
-// 2) concert-this
-// 3) movie-this
-// 4) do-what-it-says
+// 2) do-what-it-says
+// 3) conert-this
+// 4) movie-this
 
 // Code to read and set any environment variables with the dotenv package:
 var dotenv = require("dotenv").config();
@@ -10,56 +10,141 @@ var dotenv = require("dotenv").config();
 // // Import the keys.js file and store it in a variable:
 var keys = require("./keys.js");
 
-// // To get the Node-Spotify module into the liri.js:
-var Spotify = require('node-spotify-api');
+// ===== 1) SPOTIFY SEARCH ====== //
+// To get the Node-Spotify module into the liri.js:
+var Spotify = require("node-spotify-api");
 
 // // Access my API keys:
 var spotify = new Spotify(keys.spotify);
 
-// Conditions for Spotify search:
-if (process.argv[2] === "spotify-this-song" )  {
-    spotify.search({type: "track", query: process.argv[3] ? process.argv[3] : "The Sign" }, function(err, response) {
-        if (err) {
-            return console.log("Error occurred: " + err);
-        } else {
-            // If the argument is undefined (i.e. If the user does not enter any song name...)
-            if (!process.argv[3]) {
+// Setting the spotify.search as a fuction in global variable:
+function spotfiySearch(query) {
+  spotify.search({ type: "track", query }, function(err, response) {
+    if (err) {
+      return console.log("Connection error occurred: " + err);
+    } else {
+      // If the argument is undefined (i.e. If the user does not enter any song name...)
+      if (!process.argv[3]) {
+        // Output "The Sign" by The Ace of Base
+        for (i = 0; i < response.tracks.items.length; i++) {
+          // console.log(response.tracks.items[i].name);
 
-                // Output "The Sign" by The Ace of Base
-                for (i = 0; i < response.tracks.items.length; i++) {
-                    // console.log(response.tracks.items[i].name);
-                
-                    if (response.tracks.items[i].name == "The Sign" && response.tracks.items[i].artists[0].name == "Ace of Base") {
-                        console.log(
-                            "Artist: " + response.tracks.items[i].artists[0].name + "\n" +
-                            "Song Title: " + response.tracks.items[i].name + "\n" +
-                            "A Preview Link of the Song from Spotify: " + response.tracks.items[i].external_urls.spotify + "\n" +
-                            "The Album: " + response.tracks.items[i].album.name
-                        );
-                        return
-                    }
-                };      
-            }
-            
-        
-            // If the argument is defined (i.e. If the song name entered by the user is found)
-            else {
-                // console.log(response);
-
-                // If there are no items found in the array of results output (i.e. No matching song found):
-                if (response.tracks.total === 0) {
-                    console.log("Sorry, no song found!");
-                } else {
-                    console.log(
-                        "Artist: " + response.tracks.items[0].artists[0].name + "\n" +
-                        "Song Title: " + response.tracks.items[0].name + "\n" +
-                        "A Preview Link of the Song from Spotify: " + response.tracks.items[0].external_urls.spotify + "\n" +
-                        "The Album: " + response.tracks.items[0].album.name   
-                    );
-                }
-            }      
-             
+          if (
+            response.tracks.items[i].name == "The Sign" &&
+            response.tracks.items[i].artists[0].name == "Ace of Base"
+          ) {
+            console.log(
+              "Artist: " +
+                response.tracks.items[i].artists[0].name +
+                "\n" +
+                "Song Title: " +
+                response.tracks.items[i].name +
+                "\n" +
+                "A Preview Link of the Song from Spotify: " +
+                response.tracks.items[i].external_urls.spotify +
+                "\n" +
+                "The Album: " +
+                response.tracks.items[i].album.name
+            );
+            return;
+          }
         }
-    });
-};
+      }
 
+      // If the argument is defined (i.e. If the song name entered by the user is found)
+      else {
+        // console.log(response);
+
+        // If there are no items found in the array of results output (i.e. No matching song found):
+        if (response.tracks.total === 0) {
+          console.log("Sorry, no song found!");
+        } else {
+          console.log(
+            "Artist: " +
+              response.tracks.items[0].artists[0].name +
+              "\n" +
+              "Song Title: " +
+              response.tracks.items[0].name +
+              "\n" +
+              "A Preview Link of the Song from Spotify: " +
+              response.tracks.items[0].external_urls.spotify +
+              "\n" +
+              "The Album: " +
+              response.tracks.items[0].album.name
+          );
+        }
+      }
+    }
+  });
+}
+
+// Conditions for Spotify search:
+if (process.argv[2] === "spotify-this-song") {
+  spotfiySearch(process.argv[3] ? process.argv[3] : "The Sign");
+}
+
+// ===== 2) DO-WHAT-IT-SAYS SEARCH ===== //
+function doWhatItSaysSearch() {
+  var fs = require("fs");
+  fs.readFile("random.txt", "utf8", function(err, data) {
+    if (err) {
+      return console.log(err);
+    }
+
+    var dataArr = data.split(",");
+    console.log(dataArr[0]); // Expected output: 'spotify-this-song'
+    console.log(dataArr[1]); // Expected output: whatever song name entered into the random.txt by the user.
+
+    if (dataArr[0] === "spotify-this-song") {
+      spotfiySearch(dataArr[1]);
+    } else if (dataArr[0] === "concert-this") {
+      bandsInTownSearch(dataArr[1]);
+    } else if (dataArr[0] === "movie-this") {
+      movieSearch(dataArr[1]);
+    }
+  });
+}
+
+// Copy of spotify.search (before):
+// spotify.search({type: "track", query: process.argv[3] ? process.argv[3] : "The Sign" }, function(err, response) {
+//     if (err) {
+//         return console.log("Connection error occurred: " + err);
+//     } else {
+//         // If the argument is undefined (i.e. If the user does not enter any song name...)
+//         if (!process.argv[3]) {
+
+//             // Output "The Sign" by The Ace of Base
+//             for (i = 0; i < response.tracks.items.length; i++) {
+//                 // console.log(response.tracks.items[i].name);
+
+//                 if (response.tracks.items[i].name == "The Sign" && response.tracks.items[i].artists[0].name == "Ace of Base") {
+//                     console.log(
+//                         "Artist: " + response.tracks.items[i].artists[0].name + "\n" +
+//                         "Song Title: " + response.tracks.items[i].name + "\n" +
+//                         "A Preview Link of the Song from Spotify: " + response.tracks.items[i].external_urls.spotify + "\n" +
+//                         "The Album: " + response.tracks.items[i].album.name
+//                     );
+//                     return
+//                 }
+//             };
+//         }
+
+//         // If the argument is defined (i.e. If the song name entered by the user is found)
+//         else {
+//             // console.log(response);
+
+//             // If there are no items found in the array of results output (i.e. No matching song found):
+//             if (response.tracks.total === 0) {
+//                 console.log("Sorry, no song found!");
+//             } else {
+//                 console.log(
+//                     "Artist: " + response.tracks.items[0].artists[0].name + "\n" +
+//                     "Song Title: " + response.tracks.items[0].name + "\n" +
+//                     "A Preview Link of the Song from Spotify: " + response.tracks.items[0].external_urls.spotify + "\n" +
+//                     "The Album: " + response.tracks.items[0].album.name
+//                 );
+//             }
+//         }
+
+//     }
+// });
