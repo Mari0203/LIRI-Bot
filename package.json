@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Mari0203/LIRI-Bot-Node-App#readme",
   "dependencies": {
     "axios": "^0.19.0",
+    "bandsintown": "^1.0.1",
     "dotenv": "^8.0.0",
     "fs": "0.0.1-security",
     "moment": "^2.24.0",

@@ -10,11 +10,10 @@ var dotenv = require("dotenv").config();
 // // Import the keys.js file and store it in a variable:
 var keys = require("./keys.js");
 
-// ===== 1) SPOTIFY SEARCH ====== //
-// To get the Node-Spotify module into the liri.js:
+// =================== 1) SPOTIFY SEARCH ===================================== //
 var Spotify = require("node-spotify-api");
 
-// // Access my API keys:
+// Access my Spotify API keys:
 var spotify = new Spotify(keys.spotify);
 
 // Setting the spotify.search as a fuction in global variable:
@@ -80,12 +79,16 @@ function spotfiySearch(query) {
 
 // Conditions for search via terminal entry:
 if (process.argv[2] === "spotify-this-song") {
-  spotfiySearch(process.argv[3] ? process.argv[3] : "The Sign");
+    spotfiySearch(process.argv[3] ? process.argv[3] : "The Sign");
+
 } else if (process.argv[2] === "do-what-it-says") {
     doWhatItSaysSearch();
- };
 
-// ===== 2) DO-WHAT-IT-SAYS SEARCH (from random.txt)===== //
+} else if (process.argv[2] === "concert-this") {
+    concertSerach(process.argv[3]);
+}
+
+// ================= 2) DO-WHAT-IT-SAYS SEARCH (from random.txt)=============== //
 function doWhatItSaysSearch() {
   var fs = require("fs");
   fs.readFile("random.txt", "utf8", function(err, data) {
@@ -97,11 +100,12 @@ function doWhatItSaysSearch() {
     // console.log(dataArr[0]); // Expected output: 'spotify-this-song'
     // console.log(dataArr[1]); // Expected output: whatever song name entered into the random.txt by the user.
 
+    // Condition check to run different function based on the commands written:
     if (dataArr[0] === "spotify-this-song") {
       spotfiySearch(dataArr[1]);
       
     } else if (dataArr[0] === "concert-this") {
-      bandsInTownSearch(dataArr[1]);
+      concertSearch(dataArr[1]);
 
     } else if (dataArr[0] === "movie-this") {
       movieSearch(dataArr[1]);
@@ -109,3 +113,13 @@ function doWhatItSaysSearch() {
   });
 }
 
+// ===== 3) CONCERT SEARCH (via BandsInTown API)===== //
+function concertSearch() {
+    var Bandsintown = require('bandsintown')(APP_ID);
+    var bandsintown = new Bandsintown(keys.bandsintown);
+ 
+    bandsintown.getArtistEventList(query)
+    .then(function(events) {
+        console.log("Event list: " + events);
+  });
+};
