@@ -129,6 +129,8 @@ function concertSearch() {
 
 // ======== 4) MOVIE SEARCH (via OMDB API) ============== //
 // var axios = require("axios");
+
+
 function movieSearch() {
 
   // Store all of the arguments in an array, and
@@ -151,24 +153,37 @@ function movieSearch() {
   axios.get(urlOMDB).then(function(err, response) {
     if (err) {
       return console.log(err);
+
     } else {
-      console.log(
-        "Movie Title: " + response.data.Title + "\n",
-        "Release Year: " + response.data.Released + "\n",
-        "IMDB Rating: " + response.data.imdbRating + "\n",
-        "Rotten Tomatoes Rating: " + response.data.Ratings[2].Value + "\n",
-        "Production Country: " + response.data.Country + "\n",
-        "Original Language: " + response.data.Language + "\n",
-        "Plot: " + response.data.Plot + "\n",
-        "Casts: " + response.data.Actors.join(", ") + "\n"
-      );
+      // If the user does NOT enter a movie name,
+      // the app will output the default data for the movie, "Mr. Nobody"
+      if (!query) {
+        
+         
+      } else if (response.data === 0) {
+        console.log("Sorry, no movie found!");
+
+      } else {
+        console.log(
+          "Movie Title: " + response.data.Title + "\n",
+          "Release Year: " + response.data.Released + "\n",
+          "IMDB Rating: " + response.data.imdbRating + "\n",
+          "Rotten Tomatoes Rating: " + response.data.Ratings[2].Value + "\n",
+          "Production Country: " + response.data.Country + "\n",
+          "Original Language: " + response.data.Language + "\n",
+          "Plot: " + response.data.Plot + "\n",
+          "Casts: " + response.data.Actors.join(", ") + "\n"
+          );
+      }
+
+      
     }
   });
 };
 
 // ======== BONUS: Append data into Log.txt ============== //
-var fs = require("fs");
-fs.appendFile("log.txt", showData + divider, function(err) {
-  if (err) throw err;
-  console.log("Data is logged!");
-});
+// var fs = require("fs");
+// fs.appendFile("log.txt", query, function(err) {
+//   if (err) throw err;
+//   console.log("Data is logged!");
+// });
