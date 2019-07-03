@@ -5,6 +5,6 @@ exports.spotify = {
     secret: process.env.SPOTIFY_SECRET
 };
 
-exports.bandsintown = {
-    APP_ID: process.env.APP_ID
-};
+// exports.bandsintown = {
+//     APP_ID: process.env.APP_ID
+// };

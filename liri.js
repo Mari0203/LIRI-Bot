@@ -113,13 +113,26 @@ function doWhatItSaysSearch() {
   });
 }
 
-// ===== 3) CONCERT SEARCH (via BandsInTown API)===== //
+// ======= 3) CONCERT SEARCH (via BandsInTown API) ======= //
+var axios = require("axios");
 function concertSearch() {
-    var Bandsintown = require('bandsintown')(APP_ID);
-    var bandsintown = new Bandsintown(keys.bandsintown);
- 
-    bandsintown.getArtistEventList(query)
-    .then(function(events) {
-        console.log("Event list: " + events);
-  });
+    // var Bandsintown = require('bandsintown')(APP_ID);
+    // var bandsintown = new Bandsintown(keys.bandsintown);
+    
+    var artist = process.argv[3];
+    var url = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"; 
+    axios.get(url).then(function(response) {
+      console.log("Event list: " + response);
+
+    });
 };
+
+// ======== 4) MOVIE SEARCH (via OMDB API) ============== //
+
+
+// ======== BONUS: Append data into Log.txt ============== //
+var fs = require("fs");
+fs.appendFile("log.txt", showData + divider, function(err) {
+  if (err) throw err;
+  console.log("Data is logged!");
+});
