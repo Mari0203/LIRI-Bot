@@ -120,15 +120,51 @@ function concertSearch() {
     // var bandsintown = new Bandsintown(keys.bandsintown);
     
     var artist = process.argv[3];
-    var url = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"; 
-    axios.get(url).then(function(response) {
+    var urlBIT = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"; 
+    axios.get(urlBIT).then(function(response) {
       console.log("Event list: " + response);
 
     });
 };
 
 // ======== 4) MOVIE SEARCH (via OMDB API) ============== //
+// var axios = require("axios");
+function movieSearch() {
 
+  // Store all of the arguments in an array, and
+  // declare an empty variable to store movie name entry.
+  var argArray = process.argv;
+  var movieName = "";
+
+  // Loop through all the words in the argumentArray:
+  for (var i = 2; i < argArray.length; i++) {
+    if (i > 2 && i < argArray.length) {
+      movieName = movieName + "+" + argArray[i];
+    } else {
+      movieName += argArray[i];
+    }
+  };
+  
+  // Access OMBD API via axios package with a specified movie name
+  var urlOMDB = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+
+  axios.get(urlOMDB).then(function(err, response) {
+    if (err) {
+      return console.log(err);
+    } else {
+      console.log(
+        "Movie Title: " + response.data.Title + "\n",
+        "Release Year: " + response.data.Released + "\n",
+        "IMDB Rating: " + response.data.imdbRating + "\n",
+        "Rotten Tomatoes Rating: " + response.data.Ratings[2].Value + "\n",
+        "Production Country: " + response.data.Country + "\n",
+        "Original Language: " + response.data.Language + "\n",
+        "Plot: " + response.data.Plot + "\n",
+        "Casts: " + response.data.Actors.join(", ") + "\n"
+      );
+    }
+  });
+};
 
 // ======== BONUS: Append data into Log.txt ============== //
 var fs = require("fs");
