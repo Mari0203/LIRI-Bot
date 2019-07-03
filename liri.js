@@ -7,14 +7,18 @@
 // Code to read and set any environment variables with the dotenv package:
 var dotenv = require("dotenv").config();
 
-// // Import the keys.js file and store it in a variable:
+// Global variables:
 var keys = require("./keys.js");
+var axios = require("axios");
+var moment = require("moment");
+var fs = require("fs");
 
 // =================== 1) SPOTIFY SEARCH ===================================== //
 var Spotify = require("node-spotify-api");
 
 // Access my Spotify API keys:
 var spotify = new Spotify(keys.spotify);
+
 
 // Setting the spotify.search as a fuction in global variable:
 function spotfiySearch(query) {
@@ -86,17 +90,20 @@ if (process.argv[2] === "spotify-this-song") {
 
 } else if (process.argv[2] === "concert-this") {
     concertSearch(process.argv[3]);
+
+} else if (process.argv[2] === "movie-this") {
+    movieSearch(process.argv.slice(3).join(" "));
 }
 
 // ================= 2) DO-WHAT-IT-SAYS SEARCH (from random.txt)=============== //
 function doWhatItSaysSearch() {
-  var fs = require("fs");
+   
   fs.readFile("random.txt", "utf8", function(err, data) {
     if (err) {
       return console.log(err);
     }
 
-    var dataArr = data.split(",");
+    var dataArr = data.split(", ");
     // console.log(dataArr[0]); // Expected output: 'spotify-this-song'
     // console.log(dataArr[1]); // Expected output: whatever song name entered into the random.txt by the user.
 
@@ -114,7 +121,6 @@ function doWhatItSaysSearch() {
 }
 
 // ======= 3) CONCERT SEARCH (via BandsInTown API) ======= //
-var axios = require("axios");
 function concertSearch() {
     // var Bandsintown = require('bandsintown')(APP_ID);
     // var bandsintown = new Bandsintown(keys.bandsintown);
@@ -122,68 +128,72 @@ function concertSearch() {
     var artist = process.argv[3];
     var urlBIT = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"; 
     axios.get(urlBIT).then(function(response) {
-      console.log("Event list: " + response);
-
+     
+       console.log(
+         "Venue Name: " + response.data[0].venue.name, "\n",
+         "Location: " + response.data[0].venue.city, "\n",
+         "Date of the Event: " + moment(response.data[0].datetime).format('L'), "\n"
+       );
     });
-};
-
+}
 // ======== 4) MOVIE SEARCH (via OMDB API) ============== //
-// var axios = require("axios");
-
-
-function movieSearch() {
-
-  // Store all of the arguments in an array, and
-  // declare an empty variable to store movie name entry.
-  var argArray = process.argv;
-  var movieName = "";
-
-  // Loop through all the words in the argumentArray:
-  for (var i = 2; i < argArray.length; i++) {
-    if (i > 2 && i < argArray.length) {
-      movieName = movieName + "+" + argArray[i];
-    } else {
-      movieName += argArray[i];
-    }
-  };
+function movieSearch(movieName) {
   
   // Access OMBD API via axios package with a specified movie name
   var urlOMDB = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+  // console.log("test..")
+  axios.get(urlOMDB).then(function(response) {
 
-  axios.get(urlOMDB).then(function(err, response) {
-    if (err) {
-      return console.log(err);
-
-    } else {
+  
       // If the user does NOT enter a movie name,
       // the app will output the default data for the movie, "Mr. Nobody"
-      if (!query) {
-        
-         
+
+      if (response.data.Title ===undefined) {
+        // console.log("Nothing entered?");
+        urlOMDB = "http://www.omdbapi.com/?t=" + "Mr. Nobody" + "&y=&plot=short&apikey=trilogy";
+        axios.get(urlOMDB).then(function(response) {
+         var result="Movie Title: " + response.data.Title + "\n"+
+         "Release Year: " + response.data.Released + "\n"+
+         "IMDB Rating: " + response.data.imdbRating + "\n"+
+         "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\n"+
+         "Production Country: " + response.data.Country + "\n"+
+         "Original Language: " + response.data.Language + "\n"+
+         "Plot: " + response.data.Plot + "\n"+
+         "Casts: " + response.data.Actors + "\n"+
+         "------------------------------------\n"
+          console.log(
+            
+            );
+        }); 
+
       } else if (response.data === 0) {
         console.log("Sorry, no movie found!");
 
       } else {
-        console.log(
-          "Movie Title: " + response.data.Title + "\n",
-          "Release Year: " + response.data.Released + "\n",
-          "IMDB Rating: " + response.data.imdbRating + "\n",
-          "Rotten Tomatoes Rating: " + response.data.Ratings[2].Value + "\n",
-          "Production Country: " + response.data.Country + "\n",
-          "Original Language: " + response.data.Language + "\n",
-          "Plot: " + response.data.Plot + "\n",
-          "Casts: " + response.data.Actors.join(", ") + "\n"
-          );
+        var result=  "Movie Title: " + response.data.Title + "\n"+
+        "Release Year: " + response.data.Released + "\n"+
+        "IMDB Rating: " + response.data.imdbRating + "\n"
+        if(response.data.Ratings[1]!=undefined){
+          result= result+"Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\n"
+        }
+        
+        result= result+ "Production Country: " + response.data.Country + "\n"+
+        "Original Language: " + response.data.Language + "\n"+
+        "Plot: " + response.data.Plot + "\n"+
+        "Casts: " + response.data.Actors + "\n"+
+        "------------------------------------\n"
+        console.log(result);
+        logText(result)
       }
 
-      
-    }
   });
 };
 
 // ======== BONUS: Append data into Log.txt ============== //
-// var fs = require("fs");
-// fs.appendFile("log.txt", query, function(err) {
-//   if (err) throw err;
-//   console.log("Data is logged!");
-// });
+function logText(query) {
+  fs.appendFile("log.txt", query, function(err) {
+  if (err) throw err;
+  console.log("Data is logged!");
+});
+};
+
