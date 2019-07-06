@@ -173,59 +173,41 @@ function movieSearch(movieName) {
           "------------------------------------\n"
         );
       });
-
+    
     } else if (response.data === 0) {
       console.log("Sorry, no movie found!");
+    
     } else {
       var resultPartA =
         "------------------------------------\n" +
-        "Movie Title: " +
-        response.data.Title +
-        "\n" +
-        "Release Year: " +
-        response.data.Released +
-        "\n" +
-        "IMDB Rating: " +
-        response.data.imdbRating +
-        "\n";
+        "Movie Title: " + response.data.Title + "\n" +
+        "Release Year: " + response.data.Released + "\n" +
+        "IMDB Rating: " + response.data.imdbRating + "\n";
 
       /* Defining 'if' condition below to include Rotten Tomatoes Rating value if the response output
          is defined (i.e. "not UNdefined") within this 'else' statement because
          as some of the movies do not have Rottten Tomatoes Ratings available: */
       if (response.data.Ratings[1] != undefined) {
-        result =
-          resultPartA +
-          "Rotten Tomatoes Rating: " +
-          response.data.Ratings[1].Value +
-          "\n";
-      } else {
-        result =
-          result +
-          "Production Country: " +
-          response.data.Country +
-          "\n" +
-          "Original Language: " +
-          response.data.Language +
-          "\n" +
-          "Plot: " +
-          response.data.Plot +
-          "\n" +
-          "Casts: " +
-          response.data.Actors +
-          "\n" +
+        result = resultPartA + 
+          "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\n" +
+          "Production Country: " + response.data.Country + "\n" +
+          "Original Language: " + response.data.Language + "\n" +
+          "Plot: " + response.data.Plot + "\n" +
+          "Casts: " + response.data.Actors + "\n" +
           "------------------------------------\n";
-      }
-
+      };
       console.log(result);
       logText(result);
     }
   });
-}
+};
 
-// ======== BONUS: Append data into Log.txt ============== //
+// =================================================================================== //
+// ======== BONUS: Append data into Log.txt ========================================== //
+// =================================================================================== //
 function logText(query) {
   fs.appendFile("log.txt", query, function(err) {
     if (err) throw err;
-    console.log("Data is logged!");
+    console.log("--- Data was logged in log.txt! ---");
   });
-}
+};

@@ -94,3 +94,33 @@ Original Language: Spanish
 Plot: A student filmmaker sets out to explore the crisis in Venezuela and shed light on those who are still suffering in her home country.
 Casts: N/A
 ------------------------------------
+------------------------------------
+Movie Title: The Departed
+Release Year: 06 Oct 2006
+IMDB Rating: 8.5
+Rotten Tomatoes Rating: 91%
+------------------------------------
+Movie Title: The Departed
+Release Year: 06 Oct 2006
+IMDB Rating: 8.5
+Rotten Tomatoes Rating: 91%
+------------------------------------
+Movie Title: The Departed
+Release Year: 06 Oct 2006
+IMDB Rating: 8.5
+Rotten Tomatoes Rating: 91%
+Production Country: USA
+Original Language: English, Cantonese
+Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
+------------------------------------
+------------------------------------
+Movie Title: The Departed
+Release Year: 06 Oct 2006
+IMDB Rating: 8.5
+Rotten Tomatoes Rating: 91%
+Production Country: USA
+Original Language: English, Cantonese
+Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
+Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
+------------------------------------
