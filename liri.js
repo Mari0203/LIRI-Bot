@@ -6,7 +6,12 @@ var keys = require("./keys.js");
 var axios = require("axios");
 var moment = require("moment");
 var fs = require("fs");
+var Spotify = require("node-spotify-api");
 
+// Access my Spotify API keys:
+var spotify = new Spotify(keys.spotify);
+
+ 
 // =================================================================================== //
 // ========== Conditions for search via terminal entry =============================== //
 // =================================================================================== //
@@ -17,7 +22,8 @@ var fs = require("fs");
 // 4) movie-this
 
 if (process.argv[2] === "spotify-this-song") {
-  spotfiySearch(process.argv[3] ? process.argv[3] : "The Sign");
+  var input= process.argv[3] != undefined ? process.argv.slice(3).join(" ") : "The Sign";
+  spotfiySearch(input);
 } else if (process.argv[2] === "do-what-it-says") {
   doWhatItSaysSearch();
 } else if (process.argv[2] === "concert-this") {
@@ -29,67 +35,82 @@ if (process.argv[2] === "spotify-this-song") {
 // =================================================================================== //
 // ========== 1) SPOTIFY SEARCH ====================================================== //
 // =================================================================================== //
+function writeLogs(data){
+  fs.writeFile("log.txt", data, function(err) {
+ 
+    // If the code experiences any errors it will log the error to the console.
+    if (err) {
+      return console.log(err);
+    }
+  });
+ }
 
-var Spotify = require("node-spotify-api");
+function spotfiySearch(userInput) {
+  console.log(userInput);
 
-// Access my Spotify API keys:
-var spotify = new Spotify(keys.spotify);
-
-// Setting the spotify.search as a fuction in global variable:
-function spotfiySearch(query) {
-  spotify.search({ type: "track", query }, function(err, response) {
+ 
+  spotify.search({ type: "track", query: userInput, limit: 5}, function(err, response) {
     if (err) {
       return console.log("Connection error occurred: " + err);
     } else {
       // If the argument is UNDEFINED (i.e. If the user does not enter any song name...)
-      if (!query) {
+      if ( userInput== "The Sign" ) {
         // Output "The Sign" by The Ace of Base
-        for (i = 0; i < response.tracks.items.length; i++) {
-          if (
-            response.tracks.items[i].name == "The Sign" &&
-            response.tracks.items[i].artists[0].name == "Ace of Base"
-          ) {
+        writeLogs( JSON.stringify(response,null,2 ))
+
+        console.log(
+          "------------------------------------\n",
+          "Artist....: " + response.tracks.items[4].artists[0].name + "\n" +
+          "Song Title: " + response.tracks.items[4].name + "\n" +
+          "A Preview Link of the Song from Spotify: " + response.tracks.items[4].external_urls.spotify + "\n" +
+          "The Album: " + response.tracks.items[4].album.name + "\n" +
+          "------------------------------------\n",
+        );
+      
+      }
+      else{ 
+        for (var i = 0; i < response.tracks.items.length; i++) {
+         
+     
             console.log(
-              "Artist: " +
-                response.tracks.items[i].artists[0].name +
-                "\n" +
-                "Song Title: " +
-                response.tracks.items[i].name +
-                "\n" +
-                "A Preview Link of the Song from Spotify: " +
-                response.tracks.items[i].external_urls.spotify +
-                "\n" +
-                "The Album: " +
-                response.tracks.items[i].album.name
+              "------------------------------------\n",
+              "Artist for loop: " + response.tracks.items[i].artists[0].name + "\n" +
+              "Song Title: " + response.tracks.items[i].name + "\n" +
+              "A Preview Link of the Song from Spotify: " + response.tracks.items[i].external_urls.spotify + "\n" +
+              "The Album: " + response.tracks.items[i].album.name,
+              "------------------------------------\n",
             );
-            return;
-          }
+          
+           
+        }
+
+        if (response.tracks.items.length=== 0) {
+          console.log("Sorry, no song found!");
         }
       }
 
       // If the argument is defined (i.e. If the song name entered by the user is found)
-      else {
-        // console.log(response);
+      // else {
+      //   // console.log(response);
 
-        // If there are no items found in the array of results output (i.e. No matching song found):
-        if (response.tracks.total === 0) {
-          console.log("Sorry, no song found!");
-        } else {
-          console.log(
-            "Artist: " +
-              response.tracks.items[0].artists[0].name +
-              "\n" +
-              "Song Title: " +
-              response.tracks.items[0].name +
-              "\n" +
-              "A Preview Link of the Song from Spotify: " +
-              response.tracks.items[0].external_urls.spotify +
-              "\n" +
-              "The Album: " +
-              response.tracks.items[0].album.name
-          );
-        }
-      }
+      //   // If there are no items found in the array of results output (i.e. No matching song found):
+      //   if (response.tracks.total === 0) {
+      //     console.log("Sorry, no song found!");
+      //   } else {
+      //     // console.log(  JSON.stringify(response,null,2 ))
+
+      //     writeLogs( JSON.stringify(response,null,2 ))
+
+      //     console.log(
+      //       "------------------------------------\n",
+      //       "Artist....: " + response.tracks.items[4].artists[0].name + "\n" +
+      //       "Song Title: " + response.tracks.items[4].name + "\n" +
+      //       "A Preview Link of the Song from Spotify: " + response.tracks.items[4].external_urls.spotify + "\n" +
+      //       "The Album: " + response.tracks.items[4].album.name + "\n" +
+      //       "------------------------------------\n",
+      //     );
+      //   }
+      // }
     }
   });
 }
@@ -132,12 +153,13 @@ function concertSearch() {
 
   axios.get(urlBIT).then(function(response) {
     console.log(
-      "Venue Name: " + response.data[0].venue.name,
-      "\n",
-      "Location: " + response.data[0].venue.city,
-      "\n",
-      "Date of the Event: " + moment(response.data[0].datetime).format("L"),
-      "\n"
+      "------------------------------------\n",
+      "Venue Name: " + response.data[0].venue.name + "\n",
+      "Location: " + response.data[0].venue.city + "\n",
+      "Date of the Event: " +
+        moment(response.data[0].datetime).format("L") +
+        "\n",
+      "------------------------------------\n"
     );
   });
 }
@@ -148,17 +170,20 @@ function concertSearch() {
 
 function movieSearch(movieName) {
   // Access OMBD API via axios package with a specified movie name
-  var urlOMDB = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+  var urlOMDB =
+    "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
   // console.log("test..")
 
   axios.get(urlOMDB).then(function(response) {
-
     // If the user does NOT enter a movie name...
     if (response.data.Title === undefined) {
       console.log("No movie name was entered... So here's the default:");
 
       // Display movie info on "Mr. Nobody" as the default output:
-      urlOMDB = "http://www.omdbapi.com/?t=" + "Mr. Nobody" + "&y=&plot=short&apikey=trilogy";
+      urlOMDB =
+        "http://www.omdbapi.com/?t=" +
+        "Mr. Nobody" +
+        "&y=&plot=short&apikey=trilogy";
       axios.get(urlOMDB).then(function(response) {
         console.log(
           "------------------------------------\n",
@@ -173,34 +198,49 @@ function movieSearch(movieName) {
           "------------------------------------\n"
         );
       });
-    
     } else if (response.data === 0) {
       console.log("Sorry, no movie found!");
-    
     } else {
       var resultPartA =
         "------------------------------------\n" +
-        "Movie Title: " + response.data.Title + "\n" +
-        "Release Year: " + response.data.Released + "\n" +
-        "IMDB Rating: " + response.data.imdbRating + "\n";
+        "Movie Title: " +
+        response.data.Title +
+        "\n" +
+        "Release Year: " +
+        response.data.Released +
+        "\n" +
+        "IMDB Rating: " +
+        response.data.imdbRating +
+        "\n";
 
       /* Defining 'if' condition below to include Rotten Tomatoes Rating value if the response output
          is defined (i.e. "not UNdefined") within this 'else' statement because
          as some of the movies do not have Rottten Tomatoes Ratings available: */
       if (response.data.Ratings[1] != undefined) {
-        result = resultPartA + 
-          "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\n" +
-          "Production Country: " + response.data.Country + "\n" +
-          "Original Language: " + response.data.Language + "\n" +
-          "Plot: " + response.data.Plot + "\n" +
-          "Casts: " + response.data.Actors + "\n" +
+        result =
+          resultPartA +
+          "Rotten Tomatoes Rating: " +
+          response.data.Ratings[1].Value +
+          "\n" +
+          "Production Country: " +
+          response.data.Country +
+          "\n" +
+          "Original Language: " +
+          response.data.Language +
+          "\n" +
+          "Plot: " +
+          response.data.Plot +
+          "\n" +
+          "Casts: " +
+          response.data.Actors +
+          "\n" +
           "------------------------------------\n";
-      };
+      }
       console.log(result);
       logText(result);
     }
   });
-};
+}
 
 // =================================================================================== //
 // ======== BONUS: Append data into Log.txt ========================================== //
@@ -210,4 +250,4 @@ function logText(query) {
     if (err) throw err;
     console.log("--- Data was logged in log.txt! ---");
   });
-};
+}

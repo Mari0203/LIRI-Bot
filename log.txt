@@ -1,126 +1,1247 @@
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 85/100
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 85/100
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-Movie Title: Mr. Nobody
-Release Year: 26 Sep 2013
-IMDB Rating: 7.8
-Rotten Tomatoes Rating: 67%
-Production Country: Belgium, Germany, Canada, France, USA, UK
-Original Language: English, Mohawk
-Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
-Casts: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
-------------------------------------
-Movie Title: Mr. Nobody
-Release Year: 26 Sep 2013
-IMDB Rating: 7.8
-Rotten Tomatoes Rating: 67%
-Production Country: Belgium, Germany, Canada, France, USA, UK
-Original Language: English, Mohawk
-Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
-Casts: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
-------------------------------------
-Movie Title: Departed
-Release Year: 01 Apr 2017
-IMDB Rating: N/A
-Production Country: Canada, Venezuela
-Original Language: Spanish
-Plot: A student filmmaker sets out to explore the crisis in Venezuela and shed light on those who are still suffering in her home country.
-Casts: N/A
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-Movie Title: Departed
-Release Year: 01 Apr 2017
-IMDB Rating: N/A
-Production Country: Canada, Venezuela
-Original Language: Spanish
-Plot: A student filmmaker sets out to explore the crisis in Venezuela and shed light on those who are still suffering in her home country.
-Casts: N/A
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-Movie Title: Departed
-Release Year: 01 Apr 2017
-IMDB Rating: N/A
-Production Country: Canada, Venezuela
-Original Language: Spanish
-Plot: A student filmmaker sets out to explore the crisis in Venezuela and shed light on those who are still suffering in her home country.
-Casts: N/A
-------------------------------------
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
-------------------------------------
-Movie Title: The Departed
-Release Year: 06 Oct 2006
-IMDB Rating: 8.5
-Rotten Tomatoes Rating: 91%
-Production Country: USA
-Original Language: English, Cantonese
-Plot: An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.
-Casts: Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg
-------------------------------------
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=0&limit=5",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3"
+              },
+              "href": "https://api.spotify.com/v1/artists/6KImCVD70vtIoJWnq6nGn3",
+              "id": "6KImCVD70vtIoJWnq6nGn3",
+              "name": "Harry Styles",
+              "type": "artist",
+              "uri": "spotify:artist:6KImCVD70vtIoJWnq6nGn3"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1FZKIm3JVDCxTchXDo5jOV"
+          },
+          "href": "https://api.spotify.com/v1/albums/1FZKIm3JVDCxTchXDo5jOV",
+          "id": "1FZKIm3JVDCxTchXDo5jOV",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/d4e1e36b7115e645dc6fd432cdd3ea7c0c4d939a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/2faf14c121b01bde63b55fdc9fbb3ddeec2ad48d",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/f842de1f2db71f3b1a0eb6172b4d33615edaa0ca",
+              "width": 64
+            }
+          ],
+          "name": "Harry Styles",
+          "release_date": "2017-05-12",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:1FZKIm3JVDCxTchXDo5jOV"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6KImCVD70vtIoJWnq6nGn3"
+            },
+            "href": "https://api.spotify.com/v1/artists/6KImCVD70vtIoJWnq6nGn3",
+            "id": "6KImCVD70vtIoJWnq6nGn3",
+            "name": "Harry Styles",
+            "type": "artist",
+            "uri": "spotify:artist:6KImCVD70vtIoJWnq6nGn3"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "AU",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 340706,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USSM11703595"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN",
+        "id": "5Ohxk2dO5COHF1krpoPigN",
+        "is_local": false,
+        "name": "Sign of the Times",
+        "popularity": 76,
+        "preview_url": "https://p.scdn.co/mp3-preview/af237206f611b722f48620ece049aff3b8650e77?cid=94a0005ea9604d4991df40f5ef818ddb",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:5Ohxk2dO5COHF1krpoPigN"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+              },
+              "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+              "id": "0LyfQWJT6nXafLPZqxe9Of",
+              "name": "Various Artists",
+              "type": "artist",
+              "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/35s58BRTGAEWztPo9WqCIs"
+          },
+          "href": "https://api.spotify.com/v1/albums/35s58BRTGAEWztPo9WqCIs",
+          "id": "35s58BRTGAEWztPo9WqCIs",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/3aa37254a41cf96e81572524ec523cb870f2bb89",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/c30bfc4adfa8924e87f3dff571d0d8c6f032fa0a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/923b854eefa3fe67c5089c45fb9efea4fbc5c7af",
+              "width": 64
+            }
+          ],
+          "name": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
+          "release_date": "2018-12-14",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:35s58BRTGAEWztPo9WqCIs"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865"
+            },
+            "href": "https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865",
+            "id": "55Aa2cqylxrFIXC767Z865",
+            "name": "Lil Wayne",
+            "type": "artist",
+            "uri": "spotify:artist:55Aa2cqylxrFIXC767Z865"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq"
+            },
+            "href": "https://api.spotify.com/v1/artists/7c0XG5cIJTrrAgEC3ULPiq",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq",
+            "name": "Ty Dolla $ign",
+            "type": "artist",
+            "uri": "spotify:artist:7c0XG5cIJTrrAgEC3ULPiq"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/15UsOTVnJzReFVN1VCnxy4"
+            },
+            "href": "https://api.spotify.com/v1/artists/15UsOTVnJzReFVN1VCnxy4",
+            "id": "15UsOTVnJzReFVN1VCnxy4",
+            "name": "XXXTENTACION",
+            "type": "artist",
+            "uri": "spotify:artist:15UsOTVnJzReFVN1VCnxy4"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "AU",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 233000,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71820737"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3vWzyGTu6Ovo1GdrcJqH6e"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3vWzyGTu6Ovo1GdrcJqH6e",
+        "id": "3vWzyGTu6Ovo1GdrcJqH6e",
+        "is_local": false,
+        "name": "Scared of the Dark (feat. XXXTENTACION)",
+        "popularity": 75,
+        "preview_url": null,
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:3vWzyGTu6Ovo1GdrcJqH6e"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq"
+              },
+              "href": "https://api.spotify.com/v1/artists/7c0XG5cIJTrrAgEC3ULPiq",
+              "id": "7c0XG5cIJTrrAgEC3ULPiq",
+              "name": "Ty Dolla $ign",
+              "type": "artist",
+              "uri": "spotify:artist:7c0XG5cIJTrrAgEC3ULPiq"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3SHx7bBQFI4J8QRr6D5cOK"
+          },
+          "href": "https://api.spotify.com/v1/albums/3SHx7bBQFI4J8QRr6D5cOK",
+          "id": "3SHx7bBQFI4J8QRr6D5cOK",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/023e60c410e185326b394caa3823b02e8d3e13d6",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/c19ecff803f99ae4e43f5456004feb0627cf7e84",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/0278337d0bed164a4ea0d6d1d31dcac23bca467a",
+              "width": 64
+            }
+          ],
+          "name": "Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) [Remix Version]",
+          "release_date": "2014-06-10",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:3SHx7bBQFI4J8QRr6D5cOK"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq"
+            },
+            "href": "https://api.spotify.com/v1/artists/7c0XG5cIJTrrAgEC3ULPiq",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq",
+            "name": "Ty Dolla $ign",
+            "type": "artist",
+            "uri": "spotify:artist:7c0XG5cIJTrrAgEC3ULPiq"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ",
+            "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+            "name": "The Weeknd",
+            "type": "artist",
+            "uri": "spotify:artist:1Xyo4u8uXC1ZmMpatF05PJ"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/137W8MRPWKqSmrBGDBFSop"
+            },
+            "href": "https://api.spotify.com/v1/artists/137W8MRPWKqSmrBGDBFSop",
+            "id": "137W8MRPWKqSmrBGDBFSop",
+            "name": "Wiz Khalifa",
+            "type": "artist",
+            "uri": "spotify:artist:137W8MRPWKqSmrBGDBFSop"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0YinUQ50QDB7ZxSCLyQ40k"
+            },
+            "href": "https://api.spotify.com/v1/artists/0YinUQ50QDB7ZxSCLyQ40k",
+            "id": "0YinUQ50QDB7ZxSCLyQ40k",
+            "name": "Mustard",
+            "type": "artist",
+            "uri": "spotify:artist:0YinUQ50QDB7ZxSCLyQ40k"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 242983,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USAT21401391"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7t2bFihaDvhIrd2gn2CWJO"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7t2bFihaDvhIrd2gn2CWJO",
+        "id": "7t2bFihaDvhIrd2gn2CWJO",
+        "is_local": false,
+        "name": "Or Nah (feat. The Weeknd, Wiz Khalifa & DJ Mustard) - Remix",
+        "popularity": 76,
+        "preview_url": "https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=94a0005ea9604d4991df40f5ef818ddb",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:7t2bFihaDvhIrd2gn2CWJO"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3KV3p5EY4AvKxOlhGHORLg"
+              },
+              "href": "https://api.spotify.com/v1/artists/3KV3p5EY4AvKxOlhGHORLg",
+              "id": "3KV3p5EY4AvKxOlhGHORLg",
+              "name": "Jeremih",
+              "type": "artist",
+              "uri": "spotify:artist:3KV3p5EY4AvKxOlhGHORLg"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7DMyQuDPe8xzjC0UDSDa96"
+          },
+          "href": "https://api.spotify.com/v1/albums/7DMyQuDPe8xzjC0UDSDa96",
+          "id": "7DMyQuDPe8xzjC0UDSDa96",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/559108cb16ce2ed5284c0f75d85ed28cf6e7e308",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/3180391346aec681eeb0d3c06b25463f79735293",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/2f5c67e417f37eafbde0b7c54dfbf701075050ec",
+              "width": 64
+            }
+          ],
+          "name": "Late Nights: The Album",
+          "release_date": "2015-12-04",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:7DMyQuDPe8xzjC0UDSDa96"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3KV3p5EY4AvKxOlhGHORLg"
+            },
+            "href": "https://api.spotify.com/v1/artists/3KV3p5EY4AvKxOlhGHORLg",
+            "id": "3KV3p5EY4AvKxOlhGHORLg",
+            "name": "Jeremih",
+            "type": "artist",
+            "uri": "spotify:artist:3KV3p5EY4AvKxOlhGHORLg"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7c0XG5cIJTrrAgEC3ULPiq"
+            },
+            "href": "https://api.spotify.com/v1/artists/7c0XG5cIJTrrAgEC3ULPiq",
+            "id": "7c0XG5cIJTrrAgEC3ULPiq",
+            "name": "Ty Dolla $ign",
+            "type": "artist",
+            "uri": "spotify:artist:7c0XG5cIJTrrAgEC3ULPiq"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "AU",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 245520,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USUM71517405"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3WjyiSbfR74pjWXQ3IaFKJ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3WjyiSbfR74pjWXQ3IaFKJ",
+        "id": "3WjyiSbfR74pjWXQ3IaFKJ",
+        "is_local": false,
+        "name": "Impatient",
+        "popularity": 72,
+        "preview_url": null,
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:3WjyiSbfR74pjWXQ3IaFKJ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5ksRONqssB7BR161NTtJAm"
+              },
+              "href": "https://api.spotify.com/v1/artists/5ksRONqssB7BR161NTtJAm",
+              "id": "5ksRONqssB7BR161NTtJAm",
+              "name": "Ace of Base",
+              "type": "artist",
+              "uri": "spotify:artist:5ksRONqssB7BR161NTtJAm"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AR",
+            "AT",
+            "AU",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "SA",
+            "SE",
+            "SG",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5UwIyIyFzkM7wKeGtRJPgB"
+          },
+          "href": "https://api.spotify.com/v1/albums/5UwIyIyFzkM7wKeGtRJPgB",
+          "id": "5UwIyIyFzkM7wKeGtRJPgB",
+          "images": [
+            {
+              "height": 600,
+              "url": "https://i.scdn.co/image/420f7961d01701f6d4fe8fcd6c99fde0d13e7da7",
+              "width": 600
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/14a8250ab9767f68eb58a7bcc1b2864dada763bf",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/81d371b69683de3224b978eff7d57d2e9ddc9994",
+              "width": 64
+            }
+          ],
+          "name": "The Sign (US Album) [Remastered]",
+          "release_date": "1993",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:5UwIyIyFzkM7wKeGtRJPgB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5ksRONqssB7BR161NTtJAm"
+            },
+            "href": "https://api.spotify.com/v1/artists/5ksRONqssB7BR161NTtJAm",
+            "id": "5ksRONqssB7BR161NTtJAm",
+            "name": "Ace of Base",
+            "type": "artist",
+            "uri": "spotify:artist:5ksRONqssB7BR161NTtJAm"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "AU",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 191240,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "SEVJH0803404"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0hrBpAOgrt8RXigk83LLNE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0hrBpAOgrt8RXigk83LLNE",
+        "id": "0hrBpAOgrt8RXigk83LLNE",
+        "is_local": false,
+        "name": "The Sign",
+        "popularity": 67,
+        "preview_url": "https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=94a0005ea9604d4991df40f5ef818ddb",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:0hrBpAOgrt8RXigk83LLNE"
+      }
+    ],
+    "limit": 5,
+    "next": "https://api.spotify.com/v1/search?query=The+Sign&type=track&offset=5&limit=5",
+    "offset": 0,
+    "previous": null,
+    "total": 17491
+  }
+}
