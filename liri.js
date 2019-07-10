@@ -88,29 +88,6 @@ function spotfiySearch(userInput) {
           console.log("Sorry, no song found!");
         }
       }
-
-      // If the argument is defined (i.e. If the song name entered by the user is found)
-      // else {
-      //   // console.log(response);
-
-      //   // If there are no items found in the array of results output (i.e. No matching song found):
-      //   if (response.tracks.total === 0) {
-      //     console.log("Sorry, no song found!");
-      //   } else {
-      //     // console.log(  JSON.stringify(response,null,2 ))
-
-      //     writeLogs( JSON.stringify(response,null,2 ))
-
-      //     console.log(
-      //       "------------------------------------\n",
-      //       "Artist....: " + response.tracks.items[4].artists[0].name + "\n" +
-      //       "Song Title: " + response.tracks.items[4].name + "\n" +
-      //       "A Preview Link of the Song from Spotify: " + response.tracks.items[4].external_urls.spotify + "\n" +
-      //       "The Album: " + response.tracks.items[4].album.name + "\n" +
-      //       "------------------------------------\n",
-      //     );
-      //   }
-      // }
     }
   });
 }
